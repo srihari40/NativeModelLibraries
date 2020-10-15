@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE SUB>
+<SUB DOC_VERSION="2" AME_VERSION="2020.1. - ">
+
+ <SUPERCOMPONENT>
+  <SC_SUB_NAME>DYNAMIC_OUTPUT</SC_SUB_NAME>
+  <CATNAME>Quarter_Car_Lib</CATNAME>
+  <SC_PORTS_MAP_LIST>
+   <SC_PORT_MAP>0 0 257 82 3 signal 0.000000 0.000000</SC_PORT_MAP>
+  </SC_PORTS_MAP_LIST>
+  <CIRCUIT>
+   <AME_APPLICATION>AMESim</AME_APPLICATION>
+   <COMPS_LIST>
+    <COMP>
+     <COMP_TYPE>0</COMP_TYPE>
+     <ALIAS>dynamic_time_table</ALIAS>
+     <COMP_NAME>dynamic_time_table</COMP_NAME>
+     <COMP_DISPLAYNAME>dynamic_time_table</COMP_DISPLAYNAME>
+     <COMP_ICON_DESCRIPTION>1D table interpolation u(t)</COMP_ICON_DESCRIPTION>
+     <COMP_LIBRARY_ID>sig.dynamic_time_table</COMP_LIBRARY_ID>
+     <COMP_POS>217 67</COMP_POS>
+     <COMP_DEPTH>201</COMP_DEPTH>
+     <CIR_COMP_ICON>
+      <CIR_ICON_IDENTITY>1</CIR_ICON_IDENTITY>
+      <ICON_MAP>
+       <ICON_MAP_FORMAT>svgz/base64</ICON_MAP_FORMAT>
+       <ICON_MAP_DATA>
+        H4sIAAAAAAACC5VSTY+bMBC951eMpodciLEhWUIEWamHnlqph7bXKCUOWOu1ke3l4993QNCu1D3sWsIzGvu9N89M8Tg8a+ik88qacisY34I0lb0pU5fbnz++7I7bx/Om8F0NjVR1E0pM8nZA6JTsP9uhRA4c9hySHMES0V3bvkRfOas1Qq9uoSlxzycISRl/GrQyTyU2IbSnOO77nvUps66ORZ7n8XxKV4l3gZx8e61kia2TXrpOIozL4do2CpYs7G/xJpzzmAwg/L56+d3Zu9LEF5QZEdStxK+qk1rbi8DzBoqaNigq5SotoaJGxJ4dEHxw9olgn/i81sLuWQXptKJAN6lcjSvCTQkCqWmC3eeF8cxOcqr1r+kdZRkFQqcfluOrirFGLhLtNTTvZqFH+JaxQyR4J3jFI8HyKGWCvkOUTbvPdoI9RNmO8l9v6BVxPb/d/J7Viw8XcfGqNleNczf0VyWMYnU7UJamFJNpNt7vdkxWhv/9Wj3W1kBrlQk0B8kxEoIdIE3Ix4SBqZIt8ciOkKbk8u8JZwnAPy/FNDHnzR/C3zzXIAMAAA==
+       </ICON_MAP_DATA>
+      </ICON_MAP>
+      <CIR_PORT_GRAPHICS>
+       IDxQT1JUUz4KICA8UE9SVCB0eXBlPSJzaWduYWwiIHk9IjE1IiBmYWNlPSIzIiB4PSI0MCI+CiAgIDxQT1JUX0JJVE1BUD4kQU1FL0ljb25zL3NpZ25hbDFweC5zdmc8L1BPUlRfQklUTUFQPgogIDwvUE9SVD4KIDwvUE9SVFM+Cg==
+      </CIR_PORT_GRAPHICS>
+      <CIR_PORT_HIDDEN>0</CIR_PORT_HIDDEN>
+     </CIR_COMP_ICON>
+     <COMP_SCALE_X>1.000000</COMP_SCALE_X>
+     <COMP_SCALE_Y>1.000000</COMP_SCALE_Y>
+     <COMP_GEOMETRY>1</COMP_GEOMETRY>
+     <COMP_PORTS_LIST>
+      <COMP_PORT>
+       <PORT_POS>40 15</PORT_POS>
+       <PORT_FACE>3</PORT_FACE>
+       <PORT_TYPE>signal</PORT_TYPE>
+       <PORT_NAME></PORT_NAME>
+       <PORT_DECORATION_VISIBLE>0</PORT_DECORATION_VISIBLE>
+       <PORT_DECORATION_ORIENTATION>0</PORT_DECORATION_ORIENTATION>
+       <PORT_DECORATION_BOUNDING_RECT>0 0 0 0</PORT_DECORATION_BOUNDING_RECT>
+       <PORT_CONNECT>0</PORT_CONNECT>
+       <CONNECT_LIST>
+        <CONNECT>
+         <CONNECT_ENTITY_NUM>-1</CONNECT_ENTITY_NUM>
+         <CONNECT_ENTITY_PORT>0</CONNECT_ENTITY_PORT>
+        </CONNECT>
+       </CONNECT_LIST>
+      </COMP_PORT>
+     </COMP_PORTS_LIST>
+     <LABEL_POS>0 0 0 0</LABEL_POS>
+     <LABEL_VISIBLE>0</LABEL_VISIBLE>
+     <CIRCUIT_SCOPE_ID>14</CIRCUIT_SCOPE_ID>
+     <SUBMODEL>
+      <SUB_TYPE>0</SUB_TYPE>
+      <SUB_NAME>SIGUDA01</SUB_NAME>
+      <SUB_DIR>$AME/libsig/submodels</SUB_DIR>
+      <SUB_ID_MAX>18</SUB_ID_MAX>
+      <SUB_LABEL>interpolate 1D or XY table with respect to time</SUB_LABEL>
+      <SUB_UNIT>1</SUB_UNIT>
+      <I_STORES_NUMBER>numOutputs</I_STORES_NUMBER>
+      <TIME_REQUIRED>1</TIME_REQUIRED>
+      <OUTPUT_TYPE>1</OUTPUT_TYPE>
+      <DYNAMIC_PARAMS_LIST>
+       <IPARAM>
+        <SUB_ID>14</SUB_ID>
+        <TITLE>number of outputs</TITLE>
+        <VARNAME>numOutputs</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>10000</MAX_VALUE>
+       </IPARAM>
+      </DYNAMIC_PARAMS_LIST>
+      <RPARAMS_LIST>
+       <RPARAM>
+        <SUB_ID>2</SUB_ID>
+        <TITLE>slope for x < xmin</TITLE>
+        <VARNAME>xminslope</VARNAME>
+        <VISIBILITY>(spline == 2) && (bcond==2)</VISIBILITY>
+        <DEF_VALUE>0.00000000000000e+00</DEF_VALUE>
+        <VALUE>0.00000000000000e+00</VALUE>
+        <MIN_VALUE>-1.00000000000000e+30</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>null</UNITS>
+       </RPARAM>
+       <RPARAM>
+        <SUB_ID>3</SUB_ID>
+        <TITLE>slope for x > xmax</TITLE>
+        <VARNAME>xmaxslope</VARNAME>
+        <VISIBILITY>(spline == 2) && (bcond==2)</VISIBILITY>
+        <DEF_VALUE>0.00000000000000e+00</DEF_VALUE>
+        <VALUE>0.00000000000000e+00</VALUE>
+        <MIN_VALUE>-1.00000000000000e+30</MIN_VALUE>
+        <MAX_VALUE>1.00000000000000e+30</MAX_VALUE>
+        <UNITS>null</UNITS>
+       </RPARAM>
+      </RPARAMS_LIST>
+      <IPARAMS_LIST>
+       <IPARAM>
+        <SUB_ID>4</SUB_ID>
+        <TITLE>interpolation type</TITLE>
+        <VARNAME>spline</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>3</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>linear</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>cubic</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>stairs</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>5</SUB_ID>
+        <TITLE>linear data out of range mode</TITLE>
+        <VARNAME>lmode</VARNAME>
+        <VISIBILITY>(spline == 1)</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>3</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>extrapolation</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>extreme value</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>cyclic</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>6</SUB_ID>
+        <TITLE>discontinuity handling</TITLE>
+        <VARNAME>disc</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2</DEF_VALUE>
+        <VALUE>2</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>2</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>inactive</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>active</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>7</SUB_ID>
+        <TITLE>boundary conditions</TITLE>
+        <VARNAME>bcond</VARNAME>
+        <VISIBILITY>(spline == 2)</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>3</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>natural (y''=0)</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>specified slope</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>cyclic</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>8</SUB_ID>
+        <TITLE>cubic data out of range mode</TITLE>
+        <VARNAME>cmode</VARNAME>
+        <VISIBILITY>(spline == 2)</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>2</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>linear</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>cubic</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>10</SUB_ID>
+        <TITLE>output value</TITLE>
+        <VARNAME>outputtype</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>3</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>u</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>du/dt</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>d2u/dt2</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>11</SUB_ID>
+        <TITLE>column to use for u</TITLE>
+        <NB_IN_GROUP>numOutputs</NB_IN_GROUP>
+        <VARNAME>ucol</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <DEF_VALUE>2</DEF_VALUE>
+        <VALUE>2</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>1000</MAX_VALUE>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>16</SUB_ID>
+        <TITLE>stairs data out of range mode</TITLE>
+        <VARNAME>smode</VARNAME>
+        <VISIBILITY>(spline == 3)</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>2</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>extreme value</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>cyclic</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+       <IPARAM>
+        <SUB_ID>18</SUB_ID>
+        <TITLE>initialization method</TITLE>
+        <VARNAME>initMethod</VARNAME>
+        <VISIBILITY>spline==2</VISIBILITY>
+        <DEF_VALUE>1</DEF_VALUE>
+        <VALUE>1</VALUE>
+        <MIN_VALUE>1</MIN_VALUE>
+        <MAX_VALUE>4</MAX_VALUE>
+        <ENUM_LIST>
+         <ENUM>
+          <ENUM_STRING>common spline</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>Akima</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>constrained cubic</ENUM_STRING>
+         </ENUM>
+         <ENUM>
+          <ENUM_STRING>monotonicity preserving</ENUM_STRING>
+         </ENUM>
+        </ENUM_LIST>
+       </IPARAM>
+      </IPARAMS_LIST>
+      <TPARAMS_LIST>
+       <TPARAM>
+        <SUB_ID>9</SUB_ID>
+        <TITLE>name of ASCII file</TITLE>
+        <VARNAME>filename</VARNAME>
+        <VISIBILITY>True</VISIBILITY>
+        <USES_SC_GP>1</USES_SC_GP>
+        <DEF_VALUE>${SC_library_node}/data/RoadProfile.data</DEF_VALUE>
+        <VALUE>${SC_library_node}/data/RoadProfile.data</VALUE>
+        <TEXT_TYPE>1</TEXT_TYPE>
+       </TPARAM>
+      </TPARAMS_LIST>
+      <PARAMS_GROUPS_LIST>
+       <PARAMS_GROUP>
+        <ORIG_TITLE>table</ORIG_TITLE>
+        <NAME>tbl</NAME>
+        <SUB_ID>13</SUB_ID>
+        <CIRCUIT_SCOPE_ID>14</CIRCUIT_SCOPE_ID>
+        <EDITABLE_TITLE>1</EDITABLE_TITLE>
+        <PARAM_GROUP_ELEMENT_LIST>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>spline</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+          <PARAM_GROUP_ELEMENT_KEYWORD>interpolation type</PARAM_GROUP_ELEMENT_KEYWORD>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>initMethod</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>lmode</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+          <PARAM_GROUP_ELEMENT_KEYWORD>linear out of range mode</PARAM_GROUP_ELEMENT_KEYWORD>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>smode</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+          <PARAM_GROUP_ELEMENT_KEYWORD>stairs out of range mode</PARAM_GROUP_ELEMENT_KEYWORD>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>bcond</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+          <PARAM_GROUP_ELEMENT_KEYWORD>cubic out of range mode</PARAM_GROUP_ELEMENT_KEYWORD>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>cmode</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+          <PARAM_GROUP_ELEMENT_KEYWORD>cubic extrapolation type</PARAM_GROUP_ELEMENT_KEYWORD>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>ucol</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+          <PARAM_GROUP_ELEMENT_KEYWORD>ucol</PARAM_GROUP_ELEMENT_KEYWORD>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>xminslope</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+          <PARAM_GROUP_ELEMENT_KEYWORD>X1min specified slope</PARAM_GROUP_ELEMENT_KEYWORD>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>xmaxslope</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+          <PARAM_GROUP_ELEMENT_KEYWORD>X1max specified slope</PARAM_GROUP_ELEMENT_KEYWORD>
+         </PARAM_GROUP_ELEMENT>
+         <PARAM_GROUP_ELEMENT>
+          <PARAM_GROUP_ELEMENT_VARNAME>filename</PARAM_GROUP_ELEMENT_VARNAME>
+          <PARAM_GROUP_ELEMENT_DISPLAY>0</PARAM_GROUP_ELEMENT_DISPLAY>
+          <PARAM_GROUP_ELEMENT_KEYWORD>table file</PARAM_GROUP_ELEMENT_KEYWORD>
+         </PARAM_GROUP_ELEMENT>
+        </PARAM_GROUP_ELEMENT_LIST>
+        <EDITABLE>1</EDITABLE>
+        <EDITION_TOOL>AMETable</EDITION_TOOL>
+        <EDITION_TOOL_TYPE>1</EDITION_TOOL_TYPE>
+        <PARAM_TYPE>1</PARAM_TYPE>
+        <ORIGINAL_EDITION_TOOL>AMETable</ORIGINAL_EDITION_TOOL>
+        <ORIGINAL_EDITION_TOOL_TYPE>1</ORIGINAL_EDITION_TOOL_TYPE>
+        <ORIGINAL_PARAM_TYPE>1</ORIGINAL_PARAM_TYPE>
+       </PARAMS_GROUP>
+      </PARAMS_GROUPS_LIST>
+      <EVARS_LIST>
+       <PORT>
+        <USE_REQUIRED>0</USE_REQUIRED>
+        <EVAR>
+         <SUB_ID>1</SUB_ID>
+         <TITLE>output signal</TITLE>
+         <NB_IN_GROUP>numOutputs</NB_IN_GROUP>
+         <VARNAME>u</VARNAME>
+         <VISIBILITY>True</VISIBILITY>
+         <TYPE>0</TYPE>
+         <SAVE_VALUE>1</SAVE_VALUE>
+         <DIMENSION>1</DIMENSION>
+         <IO>2</IO>
+         <UNITS>null</UNITS>
+        </EVAR>
+       </PORT>
+      </EVARS_LIST>
+      <CIR_PORTS_OVER_FRAMEWORK>0</CIR_PORTS_OVER_FRAMEWORK>
+      <SUBIDS_RESET>0</SUBIDS_RESET>
+     </SUBMODEL>
+    </COMP>
+   </COMPS_LIST>
+   <TEXTS_LIST>
+    <TEXT>
+     <TEXT_POS>67 72</TEXT_POS>
+     <TEXT_ORIENTATION>0</TEXT_ORIENTATION>
+     <HTML>
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+      &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+      p, li { white-space: pre-wrap; }
+      &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+      &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg'; font-size:10pt; color:#000000;&quot;&gt;Road profile&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+     </HTML>
+    </TEXT>
+   </TEXTS_LIST>
+   <ANIMATION_PROPERTIES>
+    <SPEED>1.00000000000000e+00</SPEED>
+    <LOOP>0</LOOP>
+   </ANIMATION_PROPERTIES>
+  </CIRCUIT>
+ </SUPERCOMPONENT>
+</SUB>

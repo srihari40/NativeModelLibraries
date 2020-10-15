@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE SPE>
+<SPE DOC_VERSION="2" AME_VERSION="2020.1. - ">
+
+ <SUBMODEL>
+  <SUB_TYPE>1</SUB_TYPE>
+  <SUB_ID_MAX>10</SUB_ID_MAX>
+  <DEFAULT_ICON>Suspension</DEFAULT_ICON>
+  <SUB_UNIT>0</SUB_UNIT>
+  <OUTPUT_TYPE>0</OUTPUT_TYPE>
+  <RPARAMS_LIST>
+   <RPARAM_EXPOSED>
+    <EXPOSED_VAR>srate@spring01</EXPOSED_VAR>
+    <TITLE>spring rate</TITLE>
+    <SUB_ID>8</SUB_ID>
+    <VARNAME>Susp_Spring_Stiffness</VARNAME>
+   </RPARAM_EXPOSED>
+  </RPARAMS_LIST>
+  <TPARAMS_LIST>
+   <TPARAM_EXPOSED>
+    <EXPOSED_VAR>text1@damper01</EXPOSED_VAR>
+    <TITLE>DampingRateData</TITLE>
+    <SUB_ID>7</SUB_ID>
+    <VARNAME>DampingRateData</VARNAME>
+   </TPARAM_EXPOSED>
+  </TPARAMS_LIST>
+  <IVARS_LIST>
+   <IVAR_EXPOSED>
+    <EXPOSED_VAR>fa@lconnector</EXPOSED_VAR>
+    <TITLE>force at port 3</TITLE>
+    <SUB_ID>9</SUB_ID>
+    <VARNAME>Force_lshaft_body_N</VARNAME>
+    <ORIG_VARNAME>Force_lshaft_body</ORIG_VARNAME>
+    <TYPE>7</TYPE>
+   </IVAR_EXPOSED>
+   <IVAR_EXPOSED>
+    <EXPOSED_VAR>va@lconnector</EXPOSED_VAR>
+    <TITLE>velocity at port 3</TITLE>
+    <SUB_ID>10</SUB_ID>
+    <VARNAME>Velocity_lshaft_body</VARNAME>
+    <TYPE>0</TYPE>
+   </IVAR_EXPOSED>
+  </IVARS_LIST>
+  <EVARS_LIST>
+   <PORT>
+    <USE_REQUIRED>0</USE_REQUIRED>
+    <EVAR>
+     <SUB_ID>7</SUB_ID>
+     <TITLE>force at port 3</TITLE>
+     <VARNAME>fa</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>7</TYPE>
+     <UNITS>N</UNITS>
+     <EXPRESS2>@_1_3+@_2_3</EXPRESS2>
+    </EVAR>
+    <EVAR>
+     <SUB_ID>8</SUB_ID>
+     <TITLE>velocity at port 3</TITLE>
+     <VARNAME>va</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>1</IO>
+     <UNITS>m/s</UNITS>
+    </EVAR>
+    <EVAR>
+     <SUB_ID>9</SUB_ID>
+     <TITLE>displacement port 3</TITLE>
+     <VARNAME>xa</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>1</IO>
+     <UNITS>m</UNITS>
+    </EVAR>
+   </PORT>
+   <PORT>
+    <USE_REQUIRED>0</USE_REQUIRED>
+    <EVAR>
+     <SUB_ID>7</SUB_ID>
+     <TITLE>force at port 3</TITLE>
+     <VARNAME>fa</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>7</TYPE>
+     <UNITS>N</UNITS>
+     <EXPRESS2>@_1_3+@_2_3</EXPRESS2>
+    </EVAR>
+    <EVAR>
+     <SUB_ID>8</SUB_ID>
+     <TITLE>velocity at port 3</TITLE>
+     <VARNAME>va</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>1</IO>
+     <UNITS>m/s</UNITS>
+    </EVAR>
+    <EVAR>
+     <SUB_ID>9</SUB_ID>
+     <TITLE>displacement port 3</TITLE>
+     <VARNAME>xa</VARNAME>
+     <VISIBILITY>True</VISIBILITY>
+     <TYPE>0</TYPE>
+     <DIMENSION>1</DIMENSION>
+     <IO>1</IO>
+     <UNITS>m</UNITS>
+    </EVAR>
+   </PORT>
+  </EVARS_LIST>
+  <EXPOSED_ORDER>
+   <EXPOSED_PARAM_ORDER>
+    <EXPOSED_DATAPATH_LIST>
+     <EXPOSED_DATAPATH>DampingRateData</EXPOSED_DATAPATH>
+     <EXPOSED_DATAPATH>Susp_Spring_Stiffness</EXPOSED_DATAPATH>
+     <EXPOSED_DATAPATH>Force_lshaft_body_N</EXPOSED_DATAPATH>
+     <EXPOSED_DATAPATH>Velocity_lshaft_body</EXPOSED_DATAPATH>
+    </EXPOSED_DATAPATH_LIST>
+   </EXPOSED_PARAM_ORDER>
+   <EXPOSED_VAR_ORDER>
+    <EXPOSED_DATAPATH_LIST>
+     <EXPOSED_DATAPATH>Force_lshaft_body_N</EXPOSED_DATAPATH>
+     <EXPOSED_DATAPATH>Velocity_lshaft_body</EXPOSED_DATAPATH>
+     <EXPOSED_DATAPATH>Susp_Spring_Stiffness</EXPOSED_DATAPATH>
+     <EXPOSED_DATAPATH>DampingRateData</EXPOSED_DATAPATH>
+    </EXPOSED_DATAPATH_LIST>
+   </EXPOSED_VAR_ORDER>
+  </EXPOSED_ORDER>
+  <PIXMAP>
+   static const char *submodel_xpm[] = {
+   "iVBORw0KGgoAAAANSUhEUgAAAEEAAABdCAIAAAB1gZzyAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAEnRFWHRTb2Z0d2FyZQBHcmVlbnNob3ReVQgFAAABZklEQVR42u2b0Q6DIAxFxfCBfqp/yB5cFoPgAGkteogPJpuWQ+G2RXUhhKlHc6vL/RSWPiZybZ7Gb77v7aIhP3EOfoABBpHmjtqqsxBr5eGt2iodmNrCZR2DkRnFXEpF3O4TLHnb2ilAfIABBmPaetHWQ/OlaITUAnazLdY0DDC8uY4Tyvmo4ypzb53SmdwbBhhggIE6jjouzpeiwVDeb/1Zb7A7WwDosx7CEvYY+3P7PD7Z1ySPWZj/+xodC4mL+pMz6gsvs/w44ob40ODD8874wv9ZXtk+BzCQvM65HrvVbcdI+ZKythaOTolRXy5HZgPfbdqa28toGJ0nPJ9GW9FW2Zwv2XVRz3SogY7d3Y4hVrm3thvQ4BD27oXj3Yv8AAMMMMAwTHxg795A3rofId7BYk3DAMPtusQ7WNRx1HEwwKCqrZoNbZUJZ3IlEd8pDlHH1U4Ana8biQ8wwFCvrTrSjh++7QOnr9N/sCP11AAAAABJRU5ErkJggg==",
+   };
+  </PIXMAP>
+  <PIXMAP_SIZE>65 93</PIXMAP_SIZE>
+  <PORTS_VISIBLE>0</PORTS_VISIBLE>
+  <COMP_GEOMETRY>1</COMP_GEOMETRY>
+  <CIR_PORTS_OVER_FRAMEWORK>1</CIR_PORTS_OVER_FRAMEWORK>
+  <SUBIDS_RESET>0</SUBIDS_RESET>
+ </SUBMODEL>
+</SPE>
